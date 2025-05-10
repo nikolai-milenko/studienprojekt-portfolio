@@ -1,14 +1,16 @@
 .grid {
   display: grid;
-  height: 100px;
+  justify-self: center;
   width: 100%;
   grid-template-columns: 4fr 1fr 4px 1fr 4fr;
-  grid-template-rows: 1fr 4px 1fr;
+  grid-template-rows: repeat(var(--line_amount), 1fr 4px 1fr);
   /*border: 2px dashed red;*/
 }
 
 :root {
-  --interval_offset: 3;
+  --line_amount: 8;
+  --offset: 3;
+  --multiplier: 0;
 
   --line_start_h: 2;
   --line_end_h: 3;
@@ -37,41 +39,55 @@
 
 #pos_vertical_line {
   grid-column: 3 /4;
-  grid-row: 1 / -1;
+  grid-row: 1 / 25;
 }
 
 #pos_horizontal_line_left {
   grid-column: var(--line_start_h) / var(--line_end_h);
-  grid-row: var(--line_start_v) / var(--line_end_v);
+  grid-row: calc(var(--multiplier) * var(--offset) + var(--line_start_v)) /
+    calc(var(--multiplier) * var(--offset) + var(--line_end_v));
 }
 
 #pos_horizontal_line_right {
   grid-column: calc(-1 * var(--line_start_h)) / calc(-1 * var(--line_end_h));
-  grid-row: var(--line_start_v) / var(--line_end_v);
+  grid-row: calc(var(--multiplier) * var(--offset) + var(--line_start_v)) /
+    calc(var(--multiplier) * var(--offset) + var(--line_end_v));
 }
 
 #pos_text_left {
   justify-self: right;
   grid-column: calc(var(--text_start_h)) / calc(var(--text_end_h));
-  grid-row: var(--text_start_v) / var(--text_end_v);
+  grid-row: calc(var(--multiplier) * var(--offset) + var(--text_start_v)) /
+    calc(var(--multiplier) * var(--offset) + var(--text_end_v));
 }
 
 #pos_text_right {
   justify-self: left;
   grid-column: calc(-1 * var(--text_start_h)) / calc(-1 * var(--text_end_h));
-  grid-row: var(--text_start_v) / var(--text_end_v);
+  grid-row: calc(var(--multiplier) * var(--offset) + var(--text_start_v)) /
+    calc(var(--multiplier) * var(--offset) + var(--text_end_v));
 }
 
 #pos_date_left {
   margin-right: 5px;
   justify-self: right;
   grid-column: calc(var(--date_start_h)) / calc(var(--date_end_h));
-  grid-row: var(--date_start_v) / var(--date_end_v);
+  grid-row: calc(var(--multiplier) * var(--offset) + var(--date_start_v)) /
+    calc(var(--multiplier) * var(--offset) + var(--date_end_v));
 }
 
 #pos_date_right {
   margin-left: 5px;
   justify-self: left;
   grid-column: calc(-1 * var(--date_start_h)) / calc(-1 * var(--date_end_h));
-  grid-row: var(--date_start_v) / var(--date_end_v);
+  grid-row: calc(var(--multiplier) * var(--offset) + var(--date_start_v)) /
+    calc(var(--multiplier) * var(--offset) + var(--date_end_v));
+}
+
+.cv {
+  padding-left: clamp(0rem, 2vw, 4rem);
+  padding-right: clamp(0rem, 2vw, 4rem);
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1200px;
 }
