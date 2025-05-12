@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Test Hide Nav</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: sans-serif;
+      line-height: 1.6;
+    }
+
+    #nav-wrap {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: #333;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      transition: top 0.3s ease;
+      z-index: 1000;
+    }
+
+    .hide-nav {
+      top: -100px;
+    }
+
+    .content {
+      margin-top: 80px;
+      padding: 20px;
+    }
+
+    .section {
+      height: 100vh;
+      border-bottom: 1px solid #ccc;
+    }
+  </style>
+</head>
+<body>
+
+  <nav id="nav-wrap">
+    Barre de navigation
+  </nav>
+
+  <div class="content">
+    <div class="section">Section 1</div>
+    <div class="section">Section 2</div>
+    <div class="section">Section 3</div>
+    <div class="section">Section 4</div>
+  </div>
+
+  <script>
+    let lastScroll = 0;
+    const nav = document.getElementById("nav-wrap");
+
+    window.addEventListener("scroll", () => {
+      const currentScroll = window.pageYOffset;
+
+      if (currentScroll > lastScroll) {
+  nav.classList.add("hide-nav");
+} else {
+  nav.classList.remove("hide-nav");
+}
+
+
+      lastScroll = currentScroll;
+    });
+  </script>
+
+</body>
+</html>

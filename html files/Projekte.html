@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio webapp</title>
+  <link rel="stylesheet" href="../css files/style.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+  <style>
+   html {
+     scroll-behavior: smooth;
+   }
+ </style>
+ 
+</head>
+
+
+ 
+<body>
+
+  <!-- Flèches latérales -->
+  <div class="arrow left">❮</div>
+  <div class="arrow right">❯</div>
+
+  <!-- Zone centrale -->
+  <div id="top" class="central-box">
+
+    <!-- Navigation -->
+    <nav id="nav-wrap">
+
+      <a class="mobile-btn" href="#nav-wrap" title="Show navigation">Show navigation</a>
+      <a class="mobile-btn" href="#" title="Hide navigation">Hide navigation</a>
+
+      <ul id="nav" class="nav">
+         <li><a class="smoothscroll" href="#Freizeit">Freizeit</a></li>
+         <li><a class="smoothscroll" href="#about">Kompetenz</a></li>
+        <li><a class="smoothscroll" href="#resume">Bildung</a></li>
+        <li><a class="smoothscroll" href="#contact">Home</a></li>
+          <li class="current"><a class="smoothscroll">projekt</a></li>
+         <li><a class="smoothscroll" href="#contact">Kontakt</a></li>
+         <li><a class="smoothscroll" href="#contact">FAQ</a></li>
+      </ul> <!-- end #nav -->
+
+   </nav> <!-- end #nav-wrap -->
+
+    <!-- Section Profil -->
+    <section class="profile">
+      <img src="../images/mee.jpg" alt="Profil" class="profile-pic">
+      <div class="profile-text">
+ 
+
+        <h2>Über mich</h2>
+        <p>
+         Hier finden Sie eine Auswahl meiner persönlichen und beruflichen Projekte, die meine Leidenschaft für Entwicklung und Technologie widerspiegeln.
+
+         Jedes Projekt wurde mit Fokus auf sauberen Code, Benutzerfreundlichkeit und technische Effizienz umgesetzt. Ich arbeite gerne mit modernen Webtechnologien wie HTML, CSS, JavaScript und Frameworks, um funktionale und ästhetische Lösungen zu realisieren.
+         
+         Meine Projekte zeigen nicht nur meine technischen Fähigkeiten, sondern auch meine Fähigkeit, kreative Ideen in konkrete Anwendungen zu verwandeln.</p>
+      </div>
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Section Portfolio -->
+    <section class="portfolio">
+      <h2>Portfolio</h2> 
+      <div class="project-grid">
+<!-- Projet 1 -->
+<div class="project-card">
+   <h3>Calculator App</h3>
+   <p>Dies ist eine einfache Calculator app, die mit HTML CSS und Javascript erstellt wurde, um meine Javascriptfähigkeiten zu entwickeln</p>
+   <div class="tags">
+     <span>HTML</span><span>CSS</span><span>JavaScript</span>
+   </div>
+   <button class="btn" onclick="openModal('modal-calculator')">See more </button>
+ </div>
+ 
+ <!-- Projet 2 -->
+ <div class="project-card">
+   <h3>Cascade</h3>
+   <p>Dies ist eine einfache Webseite, die mit HTML und CSS erstellt wurde, um meine Designfähigkeiten zu entwickeln</p>
+   <div class="tags">
+     <span>HTML</span><span>CSS</span><span>Responsive</span>
+   </div>
+   <button class="btn" onclick="openModal('modal-portfolio')">See more</button>
+ </div>
+ 
+ <!-- Projet 3 -->
+ <div class="project-card">
+   <h3>Chew-in-note</h3>
+   <p>Dies ist eine einfache Chew-in-note app, die mit HTML CSS und Javascript erstellt wurde, um meine Javascriptfähigkeiten zu entwickeln.</p>
+   <div class="tags">
+     <span>JavaScript</span><span>LocalStorage</span>
+   </div>
+   <button class="btn" onclick="openModal('modal-note')">See more</button>
+ </div>
+     
+ <!-- Projet 4 -->
+ <div class="project-card">
+   <h3>Ratespiel</h3>
+   <p>Dies ist eine einfache Rätselraten APK, die mit HTML, CSS, JAVASCRIPT und SQL (SQLite-storage) auf der Cordova-Plattform, erstellt wurde, um meine Designfähigkeiten zu entwickeln</p>
+   <div class="tags">
+      <span>APACHE-CORDOVA-APP</span><span>HTML</span><span>CSS</span><span>javascript</span><span>SQL</span>
+   </div>
+   <button class="btn" onclick="openModal('modal-Rätselraten')">See more</button>
+</div>
+</div>
+    
+<!-- Modal 1 -->
+<div class="modal" id="modal-calculator">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('modal-calculator')">&times;</span>
+    <img src="../images/portfolio/calculator.png" alt="Calculator App">
+    <h3>Calculator App</h3>
+    <p>Dies ist eine einfache Calculator app, die mit HTML CSS und Javascript erstellt wurde, um meine Javascriptfähigkeiten zu entwickeln</p>
+    <div class="tags">
+      <span>HTML</span><span>CSS</span><span>JavaScript</span>
+    </div>
+    <a href="https://noreme.github.io/Calculator/" target="_blank" class="btn">View</a>
+  </div>
+</div>
+
+<!-- Modal 2 -->
+<div class="modal" id="modal-portfolio">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('modal-portfolio')">&times;</span>
+    <img src="../images/portfolio/cascade.png" alt="Portfolio Web">
+    <h3>Portfolio Web</h3>
+    <p>Un portfolio personnel responsive avec une structure HTML/CSS bien organisée.</p>
+    <div class="tags">
+      <span>HTML</span><span>CSS</span><span>Responsive</span>
+    </div>
+    <a href="https://noreme.github.io/Cascade-Website-with-HTML5-and-CSS/" target="_blank" class="btn">View</a>
+  </div>
+</div>
+
+<!-- Modal 3 -->
+<div class="modal" id="modal-note">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('modal-note')">&times;</span>
+    <img src="../images/portfolio/todo-app.png" alt="Chew-in-note App">
+    <h3>Chew-in-note</h3>
+    <p>Dies ist eine einfache Chew-in-note app, die mit HTML CSS und Javascript erstellt wurde, um meine Javascriptfähigkeiten zu entwickeln</p>
+    <div class="tags">
+      <span>JavaScript</span><span>LocalStorage</span>
+    </div>
+    <a href="https://noreme.github.io/Chew-in-note/" target="_blank" class="btn">View</a>
+  </div>
+</div>
+<!-- Modal 4 -->
+<div class="modal" id="modal-Rätselraten">
+   <div class="modal-content">
+     <span class="close" onclick="closeModal('modal-Rätselraten')">&times;</span>
+     <img src="../images/portfolio/Rätselraten.jpg" alt="">
+     <h3>Rätselraten</h3>
+     <p>Dies ist eine einfache Rätselraten apk, die mit HTML, CSS, JAVASCRIPT und SQL (SQLite-storage)
+      auf der Cordova-Plattform, erstellt wurde, um meine Designfähigkeiten zu entwickeln</p>
+     <div class="tags">
+      <span>APACHE-CORDOVA-APP</span><span>HTML</span><span>CSS</span><span>javascript</span><span>SQL</span>
+     </div>
+     <div class="link-box">
+      <a href="App/MyAndroidSpielsApp.apk">download der Apk hier</a>
+      <a class="popup-modal-dismiss">Close</a>
+   </div>
+   </div>
+ </div>
+</section>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+ 
+ 
+
+      <!-- Flèche retour haut -->
+<!-- Footer -->
+<footer class="footer">
+   <div class="scroll-top">
+     <a href="#top"><i class="fas fa-chevron-up"></i></a>
+   </div>
+ 
+   <div class="social-icons">
+     <a href="https://github.com/noreme" target="_blank"><i class="fab fa-github"></i></a>
+   </div>
+ 
+   <div class="copyright">
+     &copy; Copyright 2025 WebApp &nbsp; • &nbsp; <span>Design by WebApp</span>
+   </div>
+ </footer>
+</div>
+  <script src="../javascript-files/js.js"></script>
+
+</body>
+</html>
