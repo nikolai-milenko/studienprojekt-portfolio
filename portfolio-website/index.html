@@ -15,45 +15,49 @@
     />
     <link rel="stylesheet" href="../css/styles.css" />
   </head>
-
   <body>
-    <!-- Navigation -->
-    <nav id="nav-wrap" class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <!-- NAVIGATION -->
+    <nav
+      class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top"
+      id="nav-wrap"
+    >
       <div class="container-fluid">
-        <a href="./index.html" class="navbar-brand portfolio-logo">
+        <a href="#home" class="navbar-brand portfolio-logo">
           <span class="logo-bluewhite">Port</span>
           <span class="logo-gradient">folio</span>
         </a>
+
         <button
           class="navbar-toggler"
           type="button"
           data-bs-toggle="collapse"
           data-bs-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Navigation umschalten"
         >
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+
+        <div
+          class="collapse navbar-collapse justify-content-end"
+          id="navbarNav"
+        >
           <ul class="navbar-nav ms-auto">
             <li class="nav-item">
-              <a class="nav-link smoothscroll active" href="./index.html">Home</a>
+              <a class="nav-link smoothscroll active" href="#home">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link smoothscroll" href="./projekte.html">Projekte</a>
+              <a class="nav-link smoothscroll" href="#about">Über mich</a>
             </li>
             <li class="nav-item">
               <a class="nav-link smoothscroll" href="./cv.html">Lebenslauf</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link smoothscroll" href="./kompetenzen.html">Kompetenzen</a>
+              <a class="nav-link smoothscroll" href="#projekte">Projekte</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link smoothscroll" href="./hobbys.html">Hobbys</a>
+              <a class="nav-link smoothscroll" href="#hobbys">Hobbys</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link smoothscroll" href="./kontakt.html">Kontakt</a>
+              <a class="nav-link smoothscroll" href="#kontakt">Kontakt</a>
             </li>
             <li class="nav-item">
               <a class="nav-link smoothscroll" href="./faq.html">FAQ</a>
@@ -62,76 +66,53 @@
         </div>
       </div>
     </nav>
-
-    <!-- Hauptinhalt -->
-    <main id="content" class="mt-navbar-offset">
-      <header id="home">
-        <div
-          class="banner d-flex align-items-center justify-content-center flex-wrap flex-md-nowrap"
-          style="min-height: 400px;"
-        >
-          <!-- Profilfoto -->
-          <div
-            class="banner-photo text-center mb-4 mb-md-0"
-            style="min-width: 220px;"
-          >
-            <img
-              src="../img/index/developer.jpg"
-              alt="Profilfoto von Kai Monolith"
-              class="rounded-circle shadow-lg"
-              style="width: 180px; height: 180px; object-fit: cover; border: 4px solid #fff;"
-            />
-          </div>
-          <!-- Begrüßungstext -->
-          <div
-            class="banner-text text-center text-md-start ms-md-5 shadow-lg rounded-4 p-4 bg-dark bg-opacity-50"
-            style="backdrop-filter: blur(3px);"
-          >
-            <h1 class="responsive-headline mb-2 text-white">
-              Hallo! Ich bin Kai Monolith.
-            </h1>
-            <ul class="list-unstyled mb-3 fs-5">
-              <li class="py-1">
-                <i class="bi bi-code-slash me-2 text-primary"></i>
-                Full-Stack-Entwickler (Java, Spring, React)
-              </li>
-              <li class="py-1">
-                <i class="bi bi-globe2 me-2 text-success"></i>
-                Fokus: moderne Webtechnologien
-              </li>
-              <li class="py-1">
-                <i class="bi bi-lightning-charge me-2 text-warning"></i>
-                Skalierbare & performante Anwendungen
-              </li>
-              <li class="py-1">
-                <i class="bi bi-person-workspace me-2 text-info"></i>
-                Teamplayer, offen für neue Herausforderungen
+    <!-- MAIN CONTENT -->
+    <div id="content" class="flex-fill">
+      <!-- MAIN PAGE -->
+      <header id="home" class="mt-navbar-offset">
+        <div class="banner">
+          <div class="banner-text">
+            <h1 class="responsive-headline">Hallo! Ich bin Kai Monolith.</h1>
+            <h3>
+              Ich bin leidenschaftlicher Full-Stack-Entwickler mit Fokus auf
+              moderne Webtechnologien. Sowohl im Frontend als auch im Backend
+              entwickle ich skalierbare, performante und benutzerfreundliche
+              Anwendungen. Beginnen Sie zu scrollen und erfahren Sie mehr
+              <a class="smoothscroll" href="#about">über mich</a>.
+            </h3>
+            <hr />
+            <ul class="social">
+              <li>
+                <a href="#" target="_blank"><i class="bi bi-github"></i></a>
               </li>
             </ul>
           </div>
         </div>
       </header>
-    </main>
 
-    <!-- Footer -->
-    <footer class="footer bg-dark text-center py-4">
-      <div class="scroll-top mb-5">
-        <a href="#top" class="text-white" aria-label="Zum Seitenanfang">
-          <i class="bi bi-chevron-up fs-3"></i>
-        </a>
-      </div>
-      <!-- Soziale Medien -->
-      <div class="social-icons mb-3">
-        <a href="#" target="_blank" class="text-white mx-2" aria-label="GitHub">
-          <i class="bi bi-github fs-3"></i>
-        </a>
-      </div>
-      <div class="copyright text-white fs-6">
-        &copy; 2025 • Design by WebApp
-      </div>
-    </footer>
+      <!-- FOOTER -->
+      <footer class="footer bg-dark text-center py-4">
+        <div class="scroll-top mb-5">
+          <a href="#top" class="text-text-white">
+            <i class="bi bi-chevron-up fs-3"></i>
+          </a>
+        </div>
 
-    <!-- Bootstrap JS Bundle -->
+        <div class="social-icons mb-3">
+          <a href="#" target="_blank" class="text-text-white mx-2">
+            <i class="bi bi-github fs-3"></i>
+          </a>
+        </div>
+
+        <div class="copyright text-white fs-6">
+          &copy; Copyright 2025 &nbsp; • &nbsp; <span>Design by WebApp</span>
+        </div>
+      </footer>
+    </div>
+    <!-- JavaScript -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Benutzerdefiniertes Skript für dynamische Abschnitte -->
+    <script src="../js/javascript.js"></script>
   </body>
 </html>
