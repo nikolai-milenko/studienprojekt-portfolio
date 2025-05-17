@@ -8,6 +8,10 @@
   background-color: var(--background-color);
 }
 
+#first-element-padding {
+  padding-top: 4.8rem;
+}
+
 /* ---------------------------------------- */
 /*               Basis-Stile               */
 /* ---------------------------------------- */
