@@ -7,6 +7,10 @@
   /*border: 2px dashed red;*/
 }
 
+.card {
+  border: 4px solid var(--primary-color);
+}
+
 :root {
   --line_amount: 8;
   --offset: 3;
@@ -34,7 +38,8 @@
 }
 
 .line_color {
-  background-color: var(--bs-border-color-translucent);
+  /*background-color: var(--bs-border-color-translucent);*/
+  background-color: var(--primary-color);
 }
 
 #pos_vertical_line {

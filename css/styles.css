@@ -1,15 +1,24 @@
 :root {
   --primary-color: white;
-  --secondary-color: grey;
-  --background-color: black;
+  --secondary-color: rgb(33, 37, 41);
+  --background-color: rgb(67, 67, 66);
 }
 .card {
   color: var(--primary-color);
-  background-color: var(--background-color);
+  background-color: var(--secondary-color);
+  border: 2px solid var(--primary-color);
 }
 
 #first-element-padding {
   padding-top: 4.8rem;
+}
+
+p {
+  color: var(--primary-color);
+}
+
+h1 {
+  color: var(--primary-color);
 }
 
 /* ---------------------------------------- */
