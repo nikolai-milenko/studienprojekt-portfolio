@@ -1,0 +1,7 @@
+.card-header .collapse_icon::after {
+  content: "▼";
+}
+
+.card-header:not(.collapsed) .collapse_icon::after {
+  content: "▲";
+}

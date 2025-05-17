@@ -1,0 +1,98 @@
+.grid {
+  display: grid;
+  justify-self: center;
+  width: 100%;
+  grid-template-columns: 4fr 1fr 4px 1fr 4fr;
+  grid-template-rows: repeat(var(--line_amount), 1fr 4px 1fr);
+  /*border: 2px dashed red;*/
+}
+
+.card {
+  border: 4px solid var(--primary-color);
+}
+
+:root {
+  --line_amount: 8;
+  --offset: 3;
+  --multiplier: 0;
+
+  --line_start_h: 2;
+  --line_end_h: 3;
+  --line_start_v: 2;
+  --line_end_v: 3;
+
+  --text_start_h: 1;
+  --text_end_h: 2;
+  --text_start_v: 1;
+  --text_end_v: 4;
+
+  --date_start_h: 2;
+  --date_end_h: 3;
+  --date_start_v: 1;
+  --date_end_v: 4;
+}
+
+.grid_item {
+  /*border: 1px solid black;*/
+  align-self: center;
+}
+
+.line_color {
+  /*background-color: var(--bs-border-color-translucent);*/
+  background-color: var(--primary-color);
+}
+
+#pos_vertical_line {
+  grid-column: 3 /4;
+  grid-row: 1 / 25;
+}
+
+#pos_horizontal_line_left {
+  grid-column: var(--line_start_h) / var(--line_end_h);
+  grid-row: calc(var(--multiplier) * var(--offset) + var(--line_start_v)) /
+    calc(var(--multiplier) * var(--offset) + var(--line_end_v));
+}
+
+#pos_horizontal_line_right {
+  grid-column: calc(-1 * var(--line_start_h)) / calc(-1 * var(--line_end_h));
+  grid-row: calc(var(--multiplier) * var(--offset) + var(--line_start_v)) /
+    calc(var(--multiplier) * var(--offset) + var(--line_end_v));
+}
+
+#pos_text_left {
+  justify-self: right;
+  grid-column: calc(var(--text_start_h)) / calc(var(--text_end_h));
+  grid-row: calc(var(--multiplier) * var(--offset) + var(--text_start_v)) /
+    calc(var(--multiplier) * var(--offset) + var(--text_end_v));
+}
+
+#pos_text_right {
+  justify-self: left;
+  grid-column: calc(-1 * var(--text_start_h)) / calc(-1 * var(--text_end_h));
+  grid-row: calc(var(--multiplier) * var(--offset) + var(--text_start_v)) /
+    calc(var(--multiplier) * var(--offset) + var(--text_end_v));
+}
+
+#pos_date_left {
+  margin-right: 5px;
+  justify-self: right;
+  grid-column: calc(var(--date_start_h)) / calc(var(--date_end_h));
+  grid-row: calc(var(--multiplier) * var(--offset) + var(--date_start_v)) /
+    calc(var(--multiplier) * var(--offset) + var(--date_end_v));
+}
+
+#pos_date_right {
+  margin-left: 5px;
+  justify-self: left;
+  grid-column: calc(-1 * var(--date_start_h)) / calc(-1 * var(--date_end_h));
+  grid-row: calc(var(--multiplier) * var(--offset) + var(--date_start_v)) /
+    calc(var(--multiplier) * var(--offset) + var(--date_end_v));
+}
+
+.cv {
+  padding-left: clamp(0rem, 2vw, 4rem);
+  padding-right: clamp(0rem, 2vw, 4rem);
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1200px;
+}
