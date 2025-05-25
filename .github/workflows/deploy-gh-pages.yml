@@ -18,7 +18,7 @@ jobs:
       - name: Build site into public/
         run: |
           mkdir public
-          cp portfolio-website/*.html public/
+          cp portfolio-website/*.html public/docs/
           cp -r css public/css
           cp -r img public/img
 
