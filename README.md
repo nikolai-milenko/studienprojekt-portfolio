@@ -30,7 +30,7 @@ Die Aufgaben wurden arbeitsteilig verteilt – von der Gestaltung über HTML-Str
 
 ## 📄 Präsentation
 
-👉 [PDF-Präsentation anzeigen](./docs/presentation.pdf)
+👉 [PDF-Präsentation anzeigen](./presentation.pdf)
 
 In der Präsentation wurden folgende Punkte behandelt:
 - Thema & Zielsetzung
