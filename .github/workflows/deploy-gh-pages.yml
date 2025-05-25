@@ -17,8 +17,9 @@ jobs:
 
       - name: Build site into public/
         run: |
-          mkdir -p public/docs
-          cp portfolio-website/*.html public/docs/
+          mkdir -p public
+          cp portfolio-website/*.html public
+          sed -i 's|\.\./css/|css/|g; s|\.\./img/|img/|g' public/*.html
           cp -r css public/css
           cp -r img public/img
 
