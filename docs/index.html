@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+    <!-- Bootstrap- und Icon-Styles -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/styles.css" />
+  </head>
+
+  <body>
+    <!-- Navigation -->
+    <nav id="nav-wrap" class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <div class="container-fluid">
+        <a href="./index.html" class="navbar-brand portfolio-logo">
+          <span class="logo-bluewhite">Port</span>
+          <span class="logo-gradient">folio</span>
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Navigation umschalten"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link smoothscroll active" href="./index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link smoothscroll" href="./projekte.html">Projekte</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link smoothscroll" href="./cv.html">Lebenslauf</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link smoothscroll" href="./kompetenzen.html">Kompetenzen</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link smoothscroll" href="./hobbys.html">Hobbys</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link smoothscroll" href="./kontakt.html">Kontakt</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link smoothscroll" href="./faq.html">FAQ</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hauptinhalt -->
+    <main id="content" class="mt-navbar-offset">
+      <header id="home">
+        <div
+          class="banner d-flex align-items-center justify-content-center flex-wrap flex-md-nowrap"
+          style="min-height: 400px;"
+        >
+          <!-- Profilfoto -->
+          <div
+            class="banner-photo text-center mb-4 mb-md-0"
+            style="min-width: 220px;"
+          >
+            <img
+              src="../img/index/developer.jpg"
+              alt="Profilfoto von Kai Monolith"
+              class="rounded-circle shadow-lg"
+              style="width: 180px; height: 180px; object-fit: cover; border: 4px solid #fff;"
+            />
+          </div>
+          <!-- Begrüßungstext -->
+          <div
+            class="banner-text text-center text-md-start ms-md-5 shadow-lg rounded-4 p-4 bg-dark bg-opacity-50"
+            style="backdrop-filter: blur(3px);"
+          >
+            <h1 class="responsive-headline mb-2 text-white">
+              Hallo! Ich bin Kai Monolith.
+            </h1>
+            <ul class="list-unstyled mb-3 fs-5">
+              <li class="py-1">
+                <i class="bi bi-code-slash me-2 text-primary"></i>
+                Full-Stack-Entwickler (Java, Spring, React)
+              </li>
+              <li class="py-1">
+                <i class="bi bi-globe2 me-2 text-success"></i>
+                Fokus: moderne Webtechnologien
+              </li>
+              <li class="py-1">
+                <i class="bi bi-lightning-charge me-2 text-warning"></i>
+                Skalierbare & performante Anwendungen
+              </li>
+              <li class="py-1">
+                <i class="bi bi-person-workspace me-2 text-info"></i>
+                Teamplayer, offen für neue Herausforderungen
+              </li>
+            </ul>
+          </div>
+        </div>
+      </header>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer bg-dark text-center py-4">
+      <div class="scroll-top mb-5">
+        <a href="#top" class="text-white" aria-label="Zum Seitenanfang">
+          <i class="bi bi-chevron-up fs-3"></i>
+        </a>
+      </div>
+      <!-- Soziale Medien -->
+      <div class="social-icons mb-3">
+        <a href="https://github.com" class="text-white mx-2" aria-label="GitHub">
+          <i class="bi bi-github fs-3"></i>
+        </a>
+      </div>
+      <div class="copyright text-white fs-6">
+        &copy; 2025 • Design by WebApp
+      </div>
+    </footer>
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

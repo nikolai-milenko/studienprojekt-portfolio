@@ -96,7 +96,7 @@ body {
 /* ---------------------------------------- */
 
 header#home {
-  background: url("../images/background.jpg") no-repeat center center;
+  background: url("../img/background.jpg") no-repeat center center;
   background-size: cover;
   position: relative;
   height: 100vh;
